@@ -6,4 +6,4 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8081/eureka
-xyz: Datta
+xyz: Rutuja
