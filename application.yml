@@ -13,3 +13,6 @@ management:
   tracing:
     sampling:
       probability: 1.0
+splunk:
+  url: http://20.11.22.159:8088/services/collector
+  token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
