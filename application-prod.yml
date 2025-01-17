@@ -16,3 +16,21 @@ management:
 splunk:
   url: http://20.11.22.159:8088/services/collector
   token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
+  logging:
+    level:
+      root: info
+    appender:
+      refs: console, Splunk
+    console:
+      pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m %X{correlationId}%n"
+    splunk:
+      url: http://localhost:8088
+      token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
+      host: SplunkDemo
+      index: api
+      type: raw
+      source: Splunk Demo
+      sourcetype: log4j
+      messageFormat: text
+      disableCertificateValidation: true
+      pattern: "{&quot;time&quot;:&quot;%d{ISO8601}&quot;,&quot;level&quot;:&quot;%p&quot;,&quot;thread&quot;:&quot;%t&quot;,&quot;logger&quot;:&quot;%c{1}&quot;,&quot;message&quot;:&quot;%enc{%m}&quot;,&quot;correlationId&quot;:&quot;%X{correlationId}&quot;,&quot;exception&quot;:&quot;%enc{%ex}&quot;}"
