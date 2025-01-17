@@ -21,7 +21,7 @@ logging:
   console:
     pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m %X{correlationId}%n"
   splunk:
-    url: http://localhost:8088
+    url: http://20.11.22.159:8088
     token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
     host: SplunkDemo
     index: api
