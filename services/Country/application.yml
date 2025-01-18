@@ -4,12 +4,7 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8081/eureka
 management:
-  zipkin:
-    tracing:
-      endpoint: http://localhost:8080/api/v2/spans
   tracing:
     sampling:
       probability: 1.0
@@ -21,12 +16,10 @@ logging:
   console:
     pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m %X{correlationId}%n"
   splunk:
-    url: http://20.11.22.159:8088
-    token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
-    host: SplunkDemo
+    host: COUNTRY
     index: api
     type: raw
-    source: Splunk Demo
+    source: Country Application
     sourcetype: log4j
     messageFormat: text
     disableCertificateValidation: true

@@ -9,3 +9,17 @@ spring:
     url: r2dbc:pool:mysql://127.0.0.1:3306/practice
     username: root
     password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:8080/api/v2/spans
+logging:
+  level:
+    root: info
+  splunk:
+    url: http://20.11.22.159:8088
+    token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
