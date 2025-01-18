@@ -1,1 +1,30 @@
-name : country default
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  application:
+    name: COUNTRY
+  webflux:
+    base-path: /country
+server:
+  servlet:
+  port: 8089
+logging:
+  level:
+    root: info
+  appender:
+    refs: console, Splunk
+  console:
+    pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m %X{correlationId}%n"
+  splunk:
+    host: COUNTRY
+    index: api
+    type: raw
+    source: COUNTRY
+    sourcetype: log4j
+    messageFormat: text
+    disableCertificateValidation: true
+    pattern: "{&quot;time&quot;:&quot;%d{ISO8601}&quot;,&quot;level&quot;:&quot;%p&quot;,&quot;thread&quot;:&quot;%t&quot;,&quot;logger&quot;:&quot;%c{1}&quot;,&quot;message&quot;:&quot;%enc{%m}&quot;,&quot;correlationId&quot;:&quot;%X{correlationId}&quot;,&quot;exception&quot;:&quot;%enc{%ex}&quot;}"
