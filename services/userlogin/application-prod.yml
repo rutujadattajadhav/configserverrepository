@@ -1,6 +1,6 @@
 spring:
   webflux:
-     base-path: /USER-LOGIN
+     base-path: /userlogin
   jpa:
     show-sql:  true
     hibernate:
