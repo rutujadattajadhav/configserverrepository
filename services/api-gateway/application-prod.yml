@@ -1,3 +1,7 @@
+reactor:
+  context-propagation: auto
+  debug-agent:
+    enabled: true
 eureka:
   instance:
     prefer-ip-address: true
