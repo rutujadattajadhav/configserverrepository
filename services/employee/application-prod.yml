@@ -1,6 +1,8 @@
 spring:
   webflux:
     base-path: /employee
+    base-path-address: /address/
+    base-path-department: /department/
   jpa:
     show-sql:  true
     hibernate:
