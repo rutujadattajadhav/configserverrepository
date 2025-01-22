@@ -1,4 +1,6 @@
 spring:
+  webflux:
+     base-path: /state
   jpa:
     show-sql:  true
     hibernate:
