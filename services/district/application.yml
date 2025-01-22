@@ -16,10 +16,10 @@ logging:
   console:
     pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5p [%t] %c{1}:%L - %m %X{correlationId}%n"
   splunk:
-    host: COUNTRY
+    host: SplunkDemo
     index: api
     type: raw
-    source: Country Application
+    source: Splunk Demo
     sourcetree: log4j
     messageFormat: text
     disableCertificateValidation: true
