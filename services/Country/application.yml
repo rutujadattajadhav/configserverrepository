@@ -26,5 +26,5 @@ logging:
     pattern: "{&quot;time&quot;:&quot;%d{ISO8601}&quot;,&quot;level&quot;:&quot;%p&quot;,&quot;thread&quot;:&quot;%t&quot;,&quot;logger&quot;:&quot;%c{1}&quot;,&quot;message&quot;:&quot;%enc{%m}&quot;,&quot;correlationId&quot;:&quot;%X{correlationId}&quot;,&quot;exception&quot;:&quot;%enc{%ex}&quot;}"
 server:
   servlet:
-    context-path-country: country/
+    context-path-country: /country
   port: 8089
