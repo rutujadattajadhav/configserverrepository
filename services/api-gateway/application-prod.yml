@@ -1,7 +1,3 @@
-reactor:
-  context-propagation: auto
-  debug-agent:
-    enabled: true
 eureka:
   instance:
     prefer-ip-address: true
@@ -10,48 +6,3 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8081/eureka
-server:
-  port: 8083
-  cloud:
-    gateway:
-      httpclient:
-        wiretap: true
-        httpserver:
-          wiretap: true
-      routes:
-        - id: USER-LOGIN-SERVICE
-          uri: lb://USER-LOGIN
-          predicates:
-            - Path=/userlogin/**
-        - id: USER-REGISTRATION-SERVICE
-          uri: lb://USER-REGISTRATION
-          predicates:
-            - Path=/userregistration/**
-        - id: DISTICT-SERVICE
-          uri: lb://DISTRICT
-          predicates:
-            - Path=/district/**
-        - id: STATE-SERVICE
-          uri: lb://STATE
-          predicates:
-            - Path=/state/**
-        - id: COUNTRY-SERVICE
-          uri: lb://COUNTRY
-          predicates:
-            - Path=/country/**
-        - id: ADDRESS-SERVICE
-          uri: lb://ADDRESS
-          predicates:
-            - Path=/address/**
-        - id: EMPLOYEE-SERVICE
-          uri: lb://EMPLOYEE
-          predicates:
-            - Path=/employee/**
-        - id: DEPARTMENT-SERVICE
-          uri: lb://DEPARTMENT
-          predicates:
-            - Path=/department/**
-        - id: SHOP-RESISTRATION-SERVICE
-          uri: lb://SHOP-RESISTRATION
-          predicates:
-            - Path=/shopresistration/**
