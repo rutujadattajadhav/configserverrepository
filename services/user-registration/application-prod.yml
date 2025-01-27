@@ -8,7 +8,7 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   r2dbc:
-    url: r2dbc:pool:mysql://1204.0.0.1:3306/practice
+    url: r2dbc:pool:mysql://127.0.0.1:3306/practice
     username: root
     password: root
 eureka:
