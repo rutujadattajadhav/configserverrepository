@@ -4,13 +4,8 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-management:
-  zipkin:
-    tracing:
-      endpoint: http://localhost:8080/api/v2/spans
-  tracing:
-    sampling:
-      probability: 1.0
+    service-url:
+      defaultZone: http://localhost:8081/eureka
 logging:
   level:
     root: info
