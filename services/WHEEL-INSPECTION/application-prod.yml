@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/wheel_inspection_db
+    url: jdbc:mysql://20.5.197.2:3306/wheel_inspection_db
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -9,5 +9,4 @@ spring:
       ddl-auto: update
     show-sql: true
 
-server:
-  port: 8042
+
