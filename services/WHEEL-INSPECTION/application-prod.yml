@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: jdbc:mysql://20.5.197.2:3306/wheel_inspection_db?useSSL=false&serverTimezone=UTC
-    username: sanpadaworkshop
+    url: jdbc:mysql://20.244.40.56:3306/wheel_inspection_db?useSSL=false&serverTimezone=UTC
+    username: sanpadashop
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
