@@ -1,5 +1,12 @@
 spring:
   datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 900000  # 15 minutes
+      keepalive-time: 60000 # 1 minute
+      connection-timeout: 30000
     url: jdbc:mysql://20.244.40.56:3306/wheel_inspection_db?useSSL=false&serverTimezone=UTC
     username: sanpadashop
     password: root
@@ -8,5 +15,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-
