@@ -1,17 +1,25 @@
 spring:
-  datasource:
-    hikari:
-      maximum-pool-size: 10
-      minimum-idle: 5
-      idle-timeout: 30000
-      max-lifetime: 900000  # 15 minutes
-      keepalive-time: 60000 # 1 minute
-      connection-timeout: 30000
-    url: jdbc:mysql://20.244.40.56:3306/wheel_inspection_db?useSSL=false&serverTimezone=UTC
-    username: sanpadashop
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
+    show-sql:  true
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  r2dbc:
+    url: r2dbc:pool:mysql://20.244.40.56:3306/practice
+    username: root
+    password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:8080/api/v2/spans
+logging:
+  level:
+    root: info
+  splunk:
+    url: http://20.11.22.159:8088
+    token: 92c9b613-cec1-47ad-a4d8-bc33c0bc7dc3
