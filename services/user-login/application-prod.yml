@@ -1,6 +1,4 @@
 spring:
-  webflux:
-     base-path: /userlogin
   datasource:
     hikari:
       maximum-pool-size: 10
@@ -9,7 +7,7 @@ spring:
       max-lifetime: 900000  # 15 minutes
       keepalive-time: 60000 # 1 minute
       connection-timeout: 30000
-    url: jdbc:mysql://20.244.40.56:3306/practice?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://20.244.40.56:3306/wheel_inspection_db?useSSL=false&serverTimezone=UTC
     username: sanpadashop
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
